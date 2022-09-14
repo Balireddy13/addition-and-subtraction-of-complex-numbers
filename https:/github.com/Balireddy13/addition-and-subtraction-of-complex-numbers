@@ -1,0 +1,60 @@
+#include <stdio.h>
+typedef struct complex {
+    float real;
+    float imag;
+} complex;
+
+complex add(complex n1, complex n2);
+
+int main() {
+    complex n1, n2, result;
+
+    printf("For 1st complex number \n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &n1.real, &n1.imag);
+    printf("\nFor 2nd complex number \n");
+    printf("Enter the real and imaginary parts: ");
+    scanf("%f %f", &n2.real, &n2.imag);
+
+    result = add(n1, n2);
+
+    printf("Sum = %.1f + %.1fi", result.real, result.imag);
+    return 0;
+}
+
+complex add(complex n1, complex n2) {
+    complex temp;
+    temp.real = n1.real + n2.real;
+    temp.imag = n1.imag + n2.imag;
+    return (temp);
+    
+    
+    
+    
+    
+    
+    #include <stdio.h>
+ 
+struct complex
+{
+   int r, i;
+};
+ 
+int main()
+{
+   struct complex a, b, c;
+   printf("Enter the value a and b of the first complex number (a + ib): ");
+   scanf("%d%d", &a.r, &a.i);
+   printf("Enter the value c and d of the second complex number (c + id): ");
+   scanf("%d%d", &b.r, &b.i);
+ 
+   c.r = a.r - b.r;
+   c.i = a.i - b.i;
+   
+   if (c.i >= 0)
+  printf("Difference of the complex numbers = %d + %di", c.r, c.i);
+   else
+  printf("Difference of the complex numbers = %d %di", c.r, c.i);
+ 
+   return 0;
+}
